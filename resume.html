@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,311 +14,354 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-:root {
-	--primary-color: #008E97;
-	--text-color: #2c3968;
-}
-html {
-	font-size: 10px;
-}
-body {
-	font-family: Inter, sans-serif;
-	background-color: #F0F8FF;
-	color: #008080;
-}
-
-/* common styles */
-img {
-	width: 100%;
-}
-a {
-	text-decoration: none;
-	color: #008080;
-}
-.description {
-	margin-top: 1rem;
-	font-size: 1.5rem;
-	font-weight: 400;
-	color: var(--text-color);
-}
-.title {
-	color: var(--primary-color);
-	font-weight: 700;
-	font-size: 2rem;
-	text-transform: uppercase;
-}
-.item_preTitle {
-	font-size: 1.4rem;
-	color: var(--text-color);
-	font-weight: 300;
-}
-.item_title {
-	font-size: 1.6rem;
-	color: #008080;
-	font-weight: 500;
-	margin: 0.8rem 0;
-}
-.item_subtitle {
-	font-size: 1.4rem;
-	color: var(--text-color);
-	font-weight: 400;
-}
-
-/* layouts */
-.container {
-  max-width: 1000px !important;
-	width: 90%;
-	margin: 0 auto;
-	display: grid;
-	padding: 5rem;
-	background: #B9D9EB;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-}
-@media only screen and (max-width: 768px) {
-	.container {
-		width: 100%;
-		grid-template-columns: 1fr;
-		padding: 3rem;
-		gap: 7rem;
-	}
-}
-.profile {
-	grid-column: 1 / -1;
-	margin-bottom: 2rem;
-}
-.group-1,
-.group-2 {
-	display: flex;
-	flex-direction: column;
-	gap: 5rem;
-}
-.group-3 {
-	max-width: 700px;
-	width: 100%;
-	margin: 0 auto;
-	grid-column: 1/-1;
-	display: flex;
-	flex-direction: row;
-	gap: 5rem;
-}
-.group-3 > div {
-	flex: 1;
-}
-@media only screen and (max-width: 768px) {
-	.profile {
-		margin-bottom: 0;
-	}
-	.group-3 {
-		flex-direction: column;
-	}
-}
-
-/* profile */
-.profile_container {
-	display: flex;
-	/* gap: 2rem; */
-}
-.profile_profileImg {
-	max-width: 250px;
-}
-.profile_name_firstName {
-	color: #008080;
-	font-weight: 200;
-	font-size: clamp(2rem, 8vw, 4rem);
-	text-transform: uppercase;
-	display: block;
-	margin-bottom: -0.8rem;
-}
-.profile_name_lastName {
-	color: var(--primary-color);
-	font-weight: 700;
-	font-size: clamp(2.5rem, 15vw, 7rem);
-	text-transform: uppercase;
-	display: block;
-}
-.profile_title {
-	font-size: 1.5rem;
-	font-weight: 400;
-	text-transform: uppercase;
-}
-.downloadBtn {
-	display: block;
-	text-decoration: underline;
-	font-size: 1.6rem;
-	margin-top: 1rem;
-}
-.downloadBtn:hover {
-	color: var(--primary-color);
-}
-@media only screen and (max-width: 768px) {
-	.profile_container {
-		flex-direction: column;
-	}
-}
-
-/* Expertise */
-.skills_list {
-	margin-top: 1rem;
-	margin-left: 2rem;
-	line-height: 2;
-}
-.skills_list li{
-	display: flex;
-	align-items: center;
-	margin: 20px auto;
-}
-.skills_list li span{
-	width: 100px;
-}
-
-@keyframes progress {
-	0% { --percentage: 0; }
-	100% { --percentage: var(--value); }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
-  
+
+  :root {
+    --primary-color: #008E97;
+    --text-color: #2c3968;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-family: Inter, sans-serif;
+    background-color: #F0F8FF;
+    color: #008080;
+  }
+
+  /* common styles */
+  img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #008080;
+  }
+
+  .description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+
+  .title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .item_preTitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+  }
+
+  .item_title {
+    font-size: 1.6rem;
+    color: #008080;
+    font-weight: 500;
+    margin: 0.8rem 0;
+  }
+
+  .item_subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+  }
+
+  /* layouts */
+  .container {
+    max-width: 1000px !important;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: #B9D9EB;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 100%;
+      grid-template-columns: 1fr;
+      padding: 3rem;
+      gap: 7rem;
+    }
+  }
+
+  .profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  .group-1,
+  .group-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .group-3 {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .group-3>div {
+    flex: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .profile {
+      margin-bottom: 0;
+    }
+
+    .group-3 {
+      flex-direction: column;
+    }
+  }
+
+  /* profile */
+  .profile_container {
+    display: flex;
+    /* gap: 2rem; */
+  }
+
+  .profile_profileImg {
+    max-width: 250px;
+  }
+
+  .profile_name_firstName {
+    color: #008080;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+  }
+
+  .profile_name_lastName {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .profile_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .downloadBtn {
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  .downloadBtn:hover {
+    color: var(--primary-color);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .profile_container {
+      flex-direction: column;
+    }
+  }
+
+  /* Expertise */
+  .skills_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+  }
+
+  .skills_list li {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .skills_list li span {
+    width: 100px;
+  }
+
+  @keyframes progress {
+    0% {
+      --percentage: 0;
+    }
+
+    100% {
+      --percentage: var(--value);
+    }
+  }
+
   @property --percentage {
-	syntax: '<number>';
-	inherits: true;
-	initial-value: 0;
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
   }
-  
+
   [role="progressbar"] {
-	--percentage: var(--value);
-	--primary: var(--primary-color);
-	--secondary: #727171;
-	--size: 50px;
-	animation: progress 2s 0.5s forwards;
-	width: var(--size);
-	aspect-ratio: 1;
-	border-radius: 50%;
-	position: relative;
-	overflow: hidden;
-	display: grid;
-	place-items: center;
+    --percentage: var(--value);
+    --primary: var(--primary-color);
+    --secondary: #727171;
+    --size: 50px;
+    animation: progress 2s 0.5s forwards;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
   }
-  
+
   [role="progressbar"]::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
-	mask: radial-gradient(#008080 55%, transparent 0);
-	mask-mode: alpha;
-	-webkit-mask: radial-gradient(#0000 55%, #000 0);
-	-webkit-mask-mode: alpha;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+    mask: radial-gradient(#008080 55%, transparent 0);
+    mask-mode: alpha;
+    -webkit-mask: radial-gradient(#0000 55%, #000 0);
+    -webkit-mask-mode: alpha;
   }
-  
+
   [role="progressbar"]::after {
-	counter-reset: percentage var(--value);
-	content: counter(percentage) '%';
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: calc(var(--size) / 5);
-	color: var(--secondary);
-	font-weight: 600;
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--secondary);
+    font-weight: 600;
   }
-  
-  
-/* Ref  */
-.ref_item {
-	margin-top: 2rem;
-}
-.ref_name {
-	font-size: 1.6rem;
-	font-weight: 700;
-}
 
-/* eduction */
-.edu_item {
-	margin-top: 2rem;
-}
-.edu .item_subtitle{
- margin-top: 0.625rem;
-}
-/* certification */
-.certification_item {
-	margin-top: 2rem;
-}
-/* exp */
-.exp_item {
-	margin-top: 2rem;
-}
 
-/* awards */
-.awards_item {
-	margin-top: 2rem;
-}
-.awards p{
-	margin-top: 0.625rem;
-}
-/* Interests */
-.interest_items {
-	margin-top: 2rem;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 2rem;
-}
-.interest_item {
-	font-size: 1.5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-	color: var(--text-color);
-}
-.interest_item svg {
-	width: 2rem;
-}
+  /* Ref  */
+  .ref_item {
+    margin-top: 2rem;
+  }
 
-/* socials */
-.social_items {
-	margin-top: 2rem;
-}
-.social_item {
-	margin-top: 1.5rem;
-	font-size: 1.5rem;
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-	justify-content: flex-start;
-	color: var(--text-color);
-}
-.social_item:hover {
-	color: var(--primary-color);
-}
-.link-hover:hover{
-	color: var(--primary-color);
-}
-.social_item svg {
-	width: 2rem;
-}
+  .ref_name {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
 
-hr {
-	grid-column: 1/-1;
-	width: 100%;
-	margin: 0 auto;
-	margin-top: 5rem;
-	margin-bottom: 1rem;
-	border: none;
-	border-top: 2px solid var(--primary-color);
-}
-@media only screen and (max-width: 768px) {
-	hr {
-		margin: 0 auto;
-	}
-}
+  /* eduction */
+  .edu_item {
+    margin-top: 2rem;
+  }
 
+  .edu .item_subtitle {
+    margin-top: 0.625rem;
+  }
+
+  /* certification */
+  .certification_item {
+    margin-top: 2rem;
+  }
+
+  /* exp */
+  .exp_item {
+    margin-top: 2rem;
+  }
+
+  /* awards */
+  .awards_item {
+    margin-top: 2rem;
+  }
+
+  .awards p {
+    margin-top: 0.625rem;
+  }
+
+  /* Interests */
+  .interest_items {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .interest_item {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+  }
+
+  .interest_item svg {
+    width: 2rem;
+  }
+
+  /* socials */
+  .social_items {
+    margin-top: 2rem;
+  }
+
+  .social_item {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+  }
+
+  .social_item:hover {
+    color: var(--primary-color);
+  }
+
+  .link-hover:hover {
+    color: var(--primary-color);
+  }
+
+  .social_item svg {
+    width: 2rem;
+  }
+
+  hr {
+    grid-column: 1/-1;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid var(--primary-color);
+  }
+
+  @media only screen and (max-width: 768px) {
+    hr {
+      margin: 0 auto;
+    }
+  }
 </style>
+
 <body>
   <div class="container">
     <div class="profile">
@@ -327,12 +371,14 @@ hr {
         </div> -->
         <div>
           <h1 class="profile_name">
-            <span class="profile_name_firstName">Parimal</span>
-            <span class="profile_name_lastName">Sharma</span>
+            <span class="profile_name_firstName">Sharma</span>
+            <span class="profile_name_lastName">Parimal</span>
           </h1>
+          
           <p class="profile_title">UI Developer</p>
           <p class="description profile_description">
-            Expert in developing Responsive & Interactive websites Expert in CSS3, HTML5, Bootstrap, React JS, Angular js and Material UI Very
+            Expert in developing Responsive & Interactive websites Expert in CSS3, HTML5, Bootstrap, React JS, Angular
+            js and Material UI Very
             good knowledge of JavaScript.
           </p>
         </div>
@@ -342,33 +388,36 @@ hr {
       <div class="skills">
         <h3 class="title">Expertise</h3>
         <ul class="skills_list description">
-          <li><span>HTML</span> <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--value: 90">
+          <li><span>HTML</span>
+            <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--value: 90">
             </div>
           </li>
-          <li><span>CSS</span> <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--value: 90">
+          <li><span>CSS</span>
+            <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--value: 90">
             </div>
           </li>
-          <li><span>JavaScript</span> <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
-              style="--value: 40">
+          <li><span>JavaScript</span>
+            <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="--value: 40">
             </div>
           </li>
-          <li><span>Bootstarp</span> <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-              style="--value: 90">
+          <li><span>Bootstarp</span>
+            <div role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--value: 90">
             </div>
           </li>
-          <li><span>React Js</span> <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-              style="--value: 70">
+          <li><span>React Js</span>
+            <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--value: 70">
             </div>
           </li>
-          <li><span>Angular Js</span> <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-              style="--value: 60">
+          <li><span>Vue Js</span>
+            <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--value: 70">
             </div>
           </li>
-          <li><span>MJML</span> <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--value: 70">
+          <li><span>Angular Js</span>
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="--value: 60">
             </div>
           </li>
-          <li><span>Material UI</span> <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-              style="--value: 60">
+          <li><span>MJML</span>
+            <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--value: 70">
             </div>
           </li>
         </ul>
@@ -397,7 +446,7 @@ hr {
         </div>
       </div>
 
-      
+
     </div>
     <div class="group-2">
       <div class="certification">
